@@ -1,0 +1,10 @@
+{
+  "final_verdict": "STRONG-WITNESS-CANDIDATE",
+  "score": 9.0,
+  "evidence_level": "three-readout-core-pass",
+  "claim_boundary": "stable smoke run only; no real-data physical validation",
+  "recommended_next_actions": [
+    "Strong-witness candidate still requires real-data third-readout mocks/nulls before any physical claim."
+  ],
+  "z_stability_failure_mode": "STABLE"
+}

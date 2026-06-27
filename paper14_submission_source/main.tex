@@ -1,0 +1,215 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\title{A Source-Frozen Multi-Readout Tau-Web Witness Protocol}
+\author{Tau Core Research}
+\date{Private scaffold, June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This private scaffold converts the \texttt{TAU\_CORE\_FULL\_PACKAGE\_001}
+materials into a reproducible paper-style protocol for testing cosmic-web
+readout candidates.  The central methodological rule is that galaxy-only
+filamentarity is not sufficient for a Tau-compatible signal.  A candidate must
+survive a source-frozen multi-readout grammar: galaxy and lensing web tensors
+must align after cleaning, the signal must be stable across redshift or radial
+slices, ordinary systematics must not dominate it, mocks must make it rare, and
+a stronger witness requires an independent third readout.  The included stable
+smoke run reaches \texttt{STRONG-WITNESS-CANDIDATE} under the package verdict
+engine.  This is an internal reproducibility and protocol result only: it is
+not a real-data discovery, not a cosmological validation, and not a proof of Tau Core.
+\end{abstract}
+
+\section{Scope and Claim Boundary}
+
+Paper 14 is a protocol paper.  It does not claim that Tau Core has detected a
+cosmic-web residual, explained dark matter, replaced $\Lambda$CDM, or validated
+a new gravitational theory.  Its purpose is narrower: to make explicit the
+minimum source-frozen promotion rule by which a galaxy-side web anomaly could
+become a Tau-compatible multi-readout witness candidate.
+
+The input package is preserved in this repository as provenance.  The stable
+smoke run is useful because it exercises the full protocol stack, not because
+it is a survey endpoint.  Future validation requires real survey inputs,
+source-native mocks, explicit covariance treatment, source-side freeze
+artifacts, and blind endpoint scoring.  The natural survey context for such a
+later test includes galaxy redshift surveys such as DESI \cite{desi2016},
+CMB/lensing products such as Planck \cite{planck2018parameters}, and
+independent lensing maps such as ACT DR6 \cite{actdr6lensing}.
+
+\section{Tau-Web Witness Rule}
+
+The starting rule is deliberately strict:
+\[
+\hbox{galaxy-only filamentarity} \neq
+\hbox{Tau-compatible signal}.
+\]
+In Tau Core language, a candidate readout residual should not be promoted when
+it appears in only one ordinary observational channel.  The minimum candidate
+requires a cleaned galaxy web tensor and a cleaned lensing web tensor that
+select the same tensor direction:
+\[
+W^{\rm clean}_{\rm gal,ab} \parallel W^{\rm clean}_{\rm lens,ab}.
+\]
+Operationally, the package evaluates the tensor cosine
+\[
+C_{\rm gal-lens} =
+\frac{W^{\rm clean}_{\rm gal,ab} W_{\rm lens}^{\rm clean,ab}}
+{\left\|W^{\rm clean}_{\rm gal}\right\|
+ \left\|W^{\rm clean}_{\rm lens}\right\|},
+\]
+the axis alignment, redshift or radial stability, systematics survival, and
+mock rarity.  A stronger witness candidate requires a third readout,
+\[
+W^{\rm clean}_{\rm gal,ab}
+\parallel W^{\rm clean}_{\rm lens,ab}
+\parallel W^{\rm extra}_{ab}.
+\]
+In the included package the extra readout is represented by a velocity-channel
+smoke component; the CMB/kappa extra readout remains absent in that run.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig_tau_web_protocol_ladder.pdf}
+\caption{Tau-web promotion ladder.  Galaxy-only filamentarity is retained as a
+weak anomaly, not as a Tau-compatible candidate.  Promotion requires
+cross-readout alignment, stability, systematics survival, mock rarity, and, for
+the strongest candidate class, an independent third readout.}
+\label{fig:ladder}
+\end{figure}
+
+\section{Pipeline Modules}
+
+The protocol stack in \texttt{TAU\_CORE\_FULL\_PACKAGE\_001} separates the
+following modules.
+
+\begin{enumerate}
+\item \textbf{Observation/readout tensor module.}  Build web tensors for galaxy
+and lensing-like channels and compare their tensor directions.
+\item \textbf{Redshift or radial stability module.}  Split the catalog into
+slices and test whether the tensor direction remains stable.
+\item \textbf{Weighted stability diagnostic.}  Allow a transparent weighted
+rescue only when low-amplitude bins are the limiting factor.
+\item \textbf{Systematics projector.}  Remove or project known systematics
+directions and measure retained signal fraction.
+\item \textbf{Mock covariance module.}  Compare the cleaned observed tensor to
+mock realizations.
+\item \textbf{Extra-readout module.}  Test whether a third independent channel
+aligns with the same tensor direction.
+\item \textbf{Verdict engine.}  Combine the above into an explicitly bounded
+candidate status.
+\end{enumerate}
+
+This structure is intentionally leak-resistant: a candidate is not promoted by
+choosing a better-fitting web template after seeing the endpoint residual.
+Instead, each readout channel and threshold is declared before the verdict
+engine is run.
+
+\section{Stable Smoke-Run Summary}
+
+The stable smoke run included in the package returns the verdict
+\texttt{STRONG-WITNESS-CANDIDATE}.  Table~\ref{tab:summary} lists the main
+quantities extracted by the reproduction script.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+Quantity & Value & Module verdict\\
+\midrule
+$A_{\rm gal}$ & 0.6487 & TAU-COMPATIBLE\\
+$A_{\rm lens}$ & 0.6466 & TAU-COMPATIBLE\\
+$C_{\rm gal-lens}$ & 0.9999 & TAU-COMPATIBLE\\
+axis alignment & 1.0000 & TAU-COMPATIBLE\\
+$S_z^{\rm tensor}$ & 0.9590 & Z-STABLE\\
+$S_z^{\rm axis}$ & 0.9901 & Z-STABLE\\
+systematics retained fraction & 0.9066 & CLEAN-CANDIDATE\\
+mock amplitude p-greater & 0.0123 & MOCK-RARE-WEAK\\
+$C_{\rm gal-velocity}$ & 0.9999 & extra readout pass\\
+final score & 9.0 & STRONG-WITNESS-CANDIDATE\\
+\bottomrule
+\end{tabular}
+\caption{Stable smoke-run quantities.  These are protocol smoke-run outputs,
+not validation-grade physical measurements.}
+\label{tab:summary}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\linewidth]{figures/fig_tau_web_smoke_metrics.pdf}
+\caption{Readout-survival metrics in the stable smoke run.  The dashed line is
+the package's 0.8 reference threshold for alignment/stability quantities.}
+\label{fig:metrics}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.72\linewidth]{figures/fig_tau_web_null_checks.pdf}
+\caption{Null and mock rarity checks in the stable smoke run.  Values are
+package-level p-greater or null fractions.  They are not discovery p-values
+because the run is a protocol smoke test, not a real-survey endpoint.}
+\label{fig:nulls}
+\end{figure}
+
+\section{Interpretation}
+
+The smoke run demonstrates that the package can execute the intended finite
+logic:
+\[
+D_{\rm gal}+D_{\rm lens}+D_{\rm sys}+D_{\rm mock}+D_z+D_{\rm extra}
+\longrightarrow \hbox{bounded verdict}.
+\]
+The important theoretical gain is architectural.  Tau-compatible web evidence
+is not allowed to mean ``a visually interesting galaxy distribution.''  It
+means a cross-readout tensor relation that remains after stability, systematics,
+mock, and optional third-readout checks.
+
+This is a meaningful strengthening of the Tau Core architecture because it
+turns the general multi-readout principle into a reproducible cosmic-web
+protocol.  It also prevents overclaiming: a galaxy-only anomaly is explicitly
+kept below the Tau-compatible candidate threshold.
+
+\section{Future Real-Data Endpoint}
+
+A validation-grade version must replace the smoke package with source-native
+survey products.  The expected first endpoint requires:
+
+\begin{enumerate}
+\item a DESI/LSS-like galaxy web readout with frozen footprint and mask rules;
+\item a Planck, ACT, Euclid, Rubin, or equivalent lensing/mass-map readout;
+\item source-native mocks and covariance;
+\item blind source-side channel definitions;
+\item explicit systematics projectors;
+\item redshift-bin stability and weighted-stability rules declared in advance;
+\item an independent third readout, such as velocity, CMB-lensing, ISW, or
+another source-native tracer.
+\end{enumerate}
+
+Until those conditions are met, the correct status is:
+\[
+\texttt{STRONG\_WITNESS\_CANDIDATE\_SMOKE\_ONLY}.
+\]
+
+\section{Conclusion}
+
+Paper 14 records a source-frozen multi-readout Tau-web witness protocol and a
+complete stable smoke-run reproduction package.  The core claim is procedural:
+galaxy-only filamentarity is insufficient, while a Tau-compatible cosmic-web
+candidate must survive galaxy-lensing alignment, redshift stability,
+systematics projection, mock rarity, and, for the strongest class, an
+independent third readout.  The included smoke run exercises this full ladder
+and reaches a strong candidate status inside the package grammar.  It does not
+establish a real-data detection, cosmological validation, or physical proof of
+Tau Core.
+
+\bibliographystyle{plain}
+\bibliography{refs}
+
+\end{document}

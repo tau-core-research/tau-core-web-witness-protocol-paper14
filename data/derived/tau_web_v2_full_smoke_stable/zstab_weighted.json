@@ -1,0 +1,25 @@
+{
+  "input_file": "/mnt/data/tau_web_v2_full_smoke_stable/results/zstab_result.json",
+  "n_bins_total": 5,
+  "n_valid_bins_raw": 5,
+  "n_bins_retained": 5,
+  "retained_bins": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "dropped_bins": [],
+  "amplitude_max": 0.2725101471040699,
+  "amplitude_floor": 0.09537855148642446,
+  "weight_power": 1.0,
+  "S_tensor_unweighted_retained": 0.9590038336702431,
+  "S_axis_unweighted_retained": 0.990057321738805,
+  "S_tensor_weighted": 0.9634987255808966,
+  "S_axis_weighted": 0.9915358752899491,
+  "adjacent_tensor_weighted": 0.9525374000411015,
+  "adjacent_axis_weighted": 0.9868377305683769,
+  "verdict": "WEIGHTED-Z-STABLE",
+  "recommendation": "Weighted z-stability passes. Use with caution: compare weighted score against mocks."
+}

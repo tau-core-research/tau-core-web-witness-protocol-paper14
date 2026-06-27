@@ -1,0 +1,9 @@
+{
+  "package": "TC-REPLICATION-PACK-001",
+  "created_utc": "2026-06-27T14:20:43.938771+00:00",
+  "directory": "/mnt/data/TC_REPLICATION_PACK_001",
+  "zip": "/mnt/data/TC_REPLICATION_PACK_001.zip",
+  "n_files": 32,
+  "zip_sha256": "6fa8e4f1e0ebd792b541b50ec5d9e37e03139cbcb880ab52a0d36ea263ff6be3",
+  "purpose": "Reproducibility pack for Tau-Web Pipeline v3."
+}

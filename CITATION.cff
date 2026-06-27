@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this private preprint scaffold, cite the repository release."
+title: "A source-frozen multi-readout Tau-web witness protocol"
+authors:
+  - family-names: "Tau Core Research"
+version: "0.1.0"
+date-released: "2026-06-27"
+repository-code: "https://github.com/tau-core-research/tau-core-web-witness-protocol-paper14"
+license: "MIT"
+

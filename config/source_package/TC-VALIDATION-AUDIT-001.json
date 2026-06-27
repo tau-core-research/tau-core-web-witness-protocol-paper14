@@ -1,0 +1,22 @@
+{
+  "module": "TC-VALIDATION-AUDIT-001",
+  "status": "READY",
+  "hard_vetoes": [
+    "systematics_dominated",
+    "galaxy_only_signal",
+    "direction_unstable_z_behavior",
+    "mock_compatible_tensor",
+    "post_hoc_axis_tuning"
+  ],
+  "minimum_tau_compatible": [
+    "clean_galaxy_lensing_alignment",
+    "z_stability",
+    "not_systematics_dominated",
+    "mock_rare"
+  ],
+  "strong_witness_requires": [
+    "tau_compatible",
+    "velocity_or_cmb_extra_readout"
+  ],
+  "next_module": "TC-REPLICATION-PACK-001"
+}

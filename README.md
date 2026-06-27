@@ -1,0 +1,96 @@
+# Tau Core Web Witness Protocol Paper 14
+
+Private Paper 14 scaffold:
+
+**A source-frozen multi-readout Tau-web witness protocol**
+
+This repository turns the `TAU_CORE_FULL_PACKAGE_001` material into a
+paper-style reproducibility package.  It preserves the source package as
+provenance, extracts the stable smoke-run outputs into derived summary
+artifacts, and builds a compact manuscript plus arXiv source bundle.
+
+## Main Claim
+
+The paper defines a source-frozen protocol for promoting a cosmic-web anomaly
+from a galaxy-only filamentarity signal to a Tau-compatible multi-readout
+witness candidate.
+
+The core rule is:
+
+```text
+galaxy-only filamentarity != Tau-compatible signal
+```
+
+The minimum Tau-compatible candidate requires:
+
+```text
+W_clean,gal parallel W_clean,lens
++ redshift stability
++ systematics projection survival
++ mock rarity
+```
+
+A stronger witness candidate additionally requires an independent third readout:
+
+```text
+W_clean,gal parallel W_clean,lens parallel W_extra
+```
+
+The included stable smoke run reaches `STRONG-WITNESS-CANDIDATE` under the
+package verdict engine, but only as a reproducible protocol smoke run.  It is
+not a real-data discovery, not a cosmological validation, and not a proof of Tau Core.
+
+## Does Not Claim
+
+- It does not claim a detected cosmic-web Tau signal.
+- It does not claim that Tau Core has been physically validated.
+- It does not claim a replacement for dark matter, dark energy, GR, or LCDM.
+- It does not claim that galaxy-only filamentarity is enough.
+- It does not claim DESI, Planck, Euclid, Rubin, ACT, or real-survey endpoint
+  validation.
+- It does not claim a final theory of the cosmic web.
+
+## Reproduce
+
+```bash
+python scripts/reproduce.py
+```
+
+This command regenerates derived summary tables, figures, the PDF manuscript,
+the arXiv source archive, and runs the public package tests.
+
+Expected terminal marker:
+
+```text
+PAPER14_REPRODUCTION_COMPLETE
+```
+
+## Included Source Package
+
+The original materials from `TAU_CORE_FULL_PACKAGE_001.zip` are preserved under:
+
+```text
+source_package_manifest/
+config/source_package/
+data/source_package_docs/
+source_package_scripts/
+data/derived/tau_web_v2_full_smoke_stable/
+```
+
+The stable smoke-run verdict used by the paper is:
+
+```text
+data/derived/tau_web_v2_full_smoke_stable/final_verdict_v3.json
+```
+
+## Important Status Labels
+
+```text
+TAU_WEB_MULTI_READOUT_WITNESS_PROTOCOL_DECLARED
+SOURCE_PACKAGE_IMPORTED_WITH_PROVENANCE
+STABLE_SMOKE_RUN_REPRODUCED
+STRONG_WITNESS_CANDIDATE_SMOKE_ONLY
+REAL_DATA_ENDPOINT_NOT_CLAIMED
+COSMOLOGICAL_VALIDATION_NOT_CLAIMED
+PHYSICAL_TAU_CORE_VALIDATION_NOT_CLAIMED
+```

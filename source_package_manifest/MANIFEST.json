@@ -1,0 +1,318 @@
+{
+  "package": "TAU_CORE_FULL_PACKAGE_001",
+  "created_utc": "2026-06-27T14:26:26.613701+00:00",
+  "description": "Complete Tau Core theory + particle physics + GR + quantum + cosmology + Tau-Web pipeline scripts and run outputs.",
+  "n_files": 62,
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 1329,
+      "sha256": "289979bc76fb04353cfd9b489b58965c163a2bc4621335e13f8e30ff9d0477cc"
+    },
+    {
+      "file": "config/TC-PREREG-001.yaml",
+      "bytes": 2386,
+      "sha256": "5571e30b80810898f3e395ed06d193faa99e649861c46183d8e26cd5e70fcfe6"
+    },
+    {
+      "file": "config/TC-VALIDATION-AUDIT-001.json",
+      "bytes": 514,
+      "sha256": "9b5dce7f2d4b14e193fe337b3cafa57cedb60a25bd5ab0fdab87dd3571c6155e"
+    },
+    {
+      "file": "config/TC_REPLICATION_PACK_001_manifest.json",
+      "bytes": 360,
+      "sha256": "ebb330db2a3ac781f8beca3cb779e4c20d1635e9eeacb44f0390f94d44cec627"
+    },
+    {
+      "file": "docs/NEXT_STEPS.md",
+      "bytes": 2576,
+      "sha256": "73b3d69435e34be7331b67e05f911da451e68fe13b0404a0da2381aaf8bb17cf"
+    },
+    {
+      "file": "docs/TAU_CORE_FULL_THEORY.md",
+      "bytes": 19230,
+      "sha256": "b58d21dab6bd4d0ddafd70f0188f6753e8b6c7dfeee1577e99a9f60e676be8da"
+    },
+    {
+      "file": "docs/TAU_WEB_PIPELINE_V3_README.md",
+      "bytes": 857,
+      "sha256": "880a92dafa19c5c16ff4028b7a60a3b9f7bdc27549279ef60a16e09bf3ca6692"
+    },
+    {
+      "file": "docs/TC-DESI-CONNECT-001.md",
+      "bytes": 3454,
+      "sha256": "bf6f2d7e434312e3eef1e8e8777a9d9af536c5d6b534bde1ea8a6fb72c96417d"
+    },
+    {
+      "file": "docs/TC-EXTRA-READOUT-001.md",
+      "bytes": 1897,
+      "sha256": "a9e04ad330688d69d3ae311b7339c55b8d8a7790928ab01adc7e18fbc567c820"
+    },
+    {
+      "file": "docs/TC-LENSING-CONNECT-001.md",
+      "bytes": 3233,
+      "sha256": "4bf13bada5f08933753c16ecf64ac34de066025fa71a9f3db943263c85625b3d"
+    },
+    {
+      "file": "docs/TC-MOCK-COV-001.md",
+      "bytes": 2187,
+      "sha256": "9c08661fdebebebf69ec7271b4a924c5bb3699b2a17834ccb5f9b8aadfe35e88"
+    },
+    {
+      "file": "docs/TC-OBS-PIPELINE-001.md",
+      "bytes": 3691,
+      "sha256": "0514ee4a04f3aa9841aa910ad8b2c6b44cd5812abc91040d12270651dc1bf848"
+    },
+    {
+      "file": "docs/TC-RUNBOOK-003.md",
+      "bytes": 8450,
+      "sha256": "ff5616ca7cf1a7c93fb9ac8acd370f75494c791992ea942cba26d4417c51c5bf"
+    },
+    {
+      "file": "docs/TC-SYS-PROJECTOR-001.md",
+      "bytes": 2021,
+      "sha256": "783c3cca9029d060f525747f134b16deaffb44a54054e9ea639bf38c71768da3"
+    },
+    {
+      "file": "docs/TC-VALIDATION-AUDIT-001.md",
+      "bytes": 7797,
+      "sha256": "428104df0aaef9cdf21c9b87abd8634ab64b7fe9b3026da693dcf033e8c4d046"
+    },
+    {
+      "file": "docs/TC-VERDICT-ENGINE-003.md",
+      "bytes": 1385,
+      "sha256": "ca61cfe3abd84539ee883ca4a5922d720f604e996e69a431d0676bf56bee5f81"
+    },
+    {
+      "file": "docs/TC-ZSTAB-001.md",
+      "bytes": 1547,
+      "sha256": "6c7df10df0dc980bc813c8944934ff7e3374febf265f63cf0cb3db9c3e4a9af5"
+    },
+    {
+      "file": "docs/TC-ZSTAB-DIAG-001.md",
+      "bytes": 2004,
+      "sha256": "a7e88ba4c327b5301bcbc6a1720b3847cadfdfdafafe30ce2c755d916eac2d26"
+    },
+    {
+      "file": "docs/TC-ZSTAB-WEIGHTED-001.md",
+      "bytes": 1809,
+      "sha256": "2134ad52d1777ef8274691a7aa3b6680910a1000f6bff439f9148f18c64a913b"
+    },
+    {
+      "file": "runs/real_desi_attempt/LRG_NGC_desi_plan.json",
+      "bytes": 909,
+      "sha256": "f2ab8eeacdb573a9240d02474502a8179db2056691ea075b731089eed1eb76eb"
+    },
+    {
+      "file": "runs/tau_web_smoke_run/final_verdict.json",
+      "bytes": 3176,
+      "sha256": "e27f74685f9f920fdd6e931c36e55a47de6805c192ad2c0976994eea90e16284"
+    },
+    {
+      "file": "runs/tau_web_smoke_run/final_verdict_v2.json",
+      "bytes": 4189,
+      "sha256": "f04b70a52693355443cc6b65cb1f330f511544670c0d328184f87345fb590439"
+    },
+    {
+      "file": "runs/tau_web_smoke_run/mock_cov_result.json",
+      "bytes": 1061,
+      "sha256": "5120132630ef138c5050d9c4691a86c28ae648d8e19d40a6ada640e38a048ebd"
+    },
+    {
+      "file": "runs/tau_web_smoke_run/mock_cov_rows.csv",
+      "bytes": 4553,
+      "sha256": "947c99703df93c207ec5206d3ad62003db9823caddfa3d46046c7e959645a024"
+    },
+    {
+      "file": "runs/tau_web_smoke_run/obs_nulls.csv",
+      "bytes": 28988,
+      "sha256": "9dcf6aa5930cce28642d093d8303384ec8f73213f35c8917b74a2d852cb85321"
+    },
+    {
+      "file": "runs/tau_web_smoke_run/obs_result.json",
+      "bytes": 1042,
+      "sha256": "0b3553826e4a35d7a1d2052f4bf867572964b5fa02814c9844d15937909f034c"
+    },
+    {
+      "file": "runs/tau_web_smoke_run/smoke_run_log.json",
+      "bytes": 16782,
+      "sha256": "62c6b58def5f18e79ccba1be29b6055d6be6e1fbf7be72dee6d5739d0ad536e8"
+    },
+    {
+      "file": "runs/tau_web_smoke_run/sys_result.json",
+      "bytes": 1206,
+      "sha256": "7595ef4af95ea95e70d2c60bfa7223e09a80c10efa237c7d6af0165977439375"
+    },
+    {
+      "file": "runs/tau_web_smoke_run/zstab_axis_matrix.csv",
+      "bytes": 444,
+      "sha256": "16317f3567e4a0ab5c04d3f781ead4c61413c0350d7b72d6ec39e71f6edc93e8"
+    },
+    {
+      "file": "runs/tau_web_smoke_run/zstab_bins.csv",
+      "bytes": 344,
+      "sha256": "dad5fa02653807465243c42918c45814335c187b533696a7f5b2524af0cd674d"
+    },
+    {
+      "file": "runs/tau_web_smoke_run/zstab_diag.json",
+      "bytes": 925,
+      "sha256": "3b6f45f32e0dcd72bd0372e3282fbb24a17a5ab9a5b225ca5abc6d95422361dc"
+    },
+    {
+      "file": "runs/tau_web_smoke_run/zstab_result.json",
+      "bytes": 2989,
+      "sha256": "ac848bf406c7b89f5e330c69ebb9974876c4aad1a8b296ae2f7cd4eaa2d4a9c5"
+    },
+    {
+      "file": "runs/tau_web_smoke_run/zstab_tensor_matrix.csv",
+      "bytes": 442,
+      "sha256": "3559203f59d7ccf55b2cca58f63b6d78d09cd6aad8fe2142969523cbf3a6dd37"
+    },
+    {
+      "file": "runs/tau_web_smoke_run/zstab_weighted.json",
+      "bytes": 764,
+      "sha256": "82d25073dfb0c6fab13592649a4cd7dbab0a8fd0ccaedd435e171cb6a47ffd47"
+    },
+    {
+      "file": "runs/tau_web_smoke_run/zstab_weighted_pairs.csv",
+      "bytes": 371,
+      "sha256": "c9ae2cb795ec3b8371a11c46a80f068b05891cb1370a8cb2ca844d3f3e40e996"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/extra_result.json",
+      "bytes": 413,
+      "sha256": "5661912571925d404f5247fb7207cfee3ea6d685924f1f6b14a83742c8538ed6"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/final_verdict_v2.json",
+      "bytes": 4109,
+      "sha256": "e682278ca8883a4f6c0871619e6793e33a53fb977367f7ad8087764f174141bf"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/final_verdict_v3.json",
+      "bytes": 4446,
+      "sha256": "4b1882560ada49d1de4f3adf0759a9e1c71f9fd306aa44277a3d0eaa719a1eb3"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/full_smoke_log.json",
+      "bytes": 24628,
+      "sha256": "9f601060aecd14876b3131349416bf119258e08eb29044e8af736723307c4a92"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/mock_cov_result.json",
+      "bytes": 1067,
+      "sha256": "72bde37c561451a9b6eda6e0978a7fcaf7d2bf63a53c28e947ad24a9e7f1dbfc"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/mock_cov_rows.csv",
+      "bytes": 6081,
+      "sha256": "17f1157a2fb3140344880df8f109ed5490a5d0c21126391dffda0eaf5b9fd0d4"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/obs_nulls.csv",
+      "bytes": 28794,
+      "sha256": "f7c9544d9db0327eeeff0e95e40464434bbc38e89b3b9ec86fb1cc68724c7673"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/obs_result.json",
+      "bytes": 1027,
+      "sha256": "8eae70cc7bee6cf052a3981e995f08c10a71b3bed9061c1c901b529e3299ffc8"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/sys_result.json",
+      "bytes": 1206,
+      "sha256": "68709a90d073712f04a1ba22c0ccf101f1d0e997d64af3a2fc6983762a8de10c"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/zstab_axis_matrix.csv",
+      "bytes": 462,
+      "sha256": "dd90a2de04dd9baab68c85b20e51c1f7ea292d6051e32badbf0db6b8a45e2a2c"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/zstab_bins.csv",
+      "bytes": 350,
+      "sha256": "73f791fced69828b849a3bfe18da77dbb415594c4a8cab6e2d671ded2c3600ea"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/zstab_diag.json",
+      "bytes": 629,
+      "sha256": "72ccb506a93984d462b6a300de599df985b2e75aa125393f9aeb312c4d752375"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/zstab_result.json",
+      "bytes": 2972,
+      "sha256": "01b3781ba4c56515e9b587b37eff56faaabfad359e822038b2d32c61dd3628e8"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/zstab_tensor_matrix.csv",
+      "bytes": 464,
+      "sha256": "35e3acaae6b14cd5ab74c3c9be0e16e3cc47c25464fffc81b7297816ba54a539"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/zstab_weighted.json",
+      "bytes": 771,
+      "sha256": "628fafd56719c3842851fbd6201f46dac35a3ee6f104e920e1eaf26d58c50b58"
+    },
+    {
+      "file": "runs/tau_web_v2_full_smoke_stable/zstab_weighted_pairs.csv",
+      "bytes": 1077,
+      "sha256": "7fc1e3f3b6ec893dfce230b3d0364babb1fa13ce666581bc990f6d936b5e1844"
+    },
+    {
+      "file": "scripts/run_tau_web_desi_v3.sh",
+      "bytes": 6173,
+      "sha256": "88a735d82697a6b400e66f1aa4bcd83cecde763d9faf9db6c5d83abbe1ad2c76"
+    },
+    {
+      "file": "scripts/tc_desi_connector.py",
+      "bytes": 13604,
+      "sha256": "b2b9c383e2a43e9038a3182758d301964e5b92259cc780b826743bcfeea55cd0"
+    },
+    {
+      "file": "scripts/tc_extra_readout.py",
+      "bytes": 9532,
+      "sha256": "2acf5d98401387dde602f5dd6047dbf86c10134d12793e5bdea84308c4eed6c2"
+    },
+    {
+      "file": "scripts/tc_lensing_connector.py",
+      "bytes": 14074,
+      "sha256": "93626147f1203f5cda2c7f3f27b12b238d24b8719d064733617ec775225bee77"
+    },
+    {
+      "file": "scripts/tc_mock_cov.py",
+      "bytes": 14009,
+      "sha256": "37cd9b2963cc4907a678c6600564489ae39c1e84ac7aabfdf01459f9459c7716"
+    },
+    {
+      "file": "scripts/tc_obs_pipeline.py",
+      "bytes": 18483,
+      "sha256": "366a3ab94a0b1bba6209e364942416fd45076d4a2f25b8526013261d9f945b75"
+    },
+    {
+      "file": "scripts/tc_sys_projector.py",
+      "bytes": 11533,
+      "sha256": "3a23c33ee0602b953c957b8a22603404b1db4c66587c8a3f5dfa1319e7397eba"
+    },
+    {
+      "file": "scripts/tc_verdict_engine_v3.py",
+      "bytes": 4926,
+      "sha256": "b2220d3ac99b2a7965f3f4e3eb8198de07848fd9c3d4963cc0495002a5a3a64a"
+    },
+    {
+      "file": "scripts/tc_zstab_diag.py",
+      "bytes": 8975,
+      "sha256": "a7822b1fa5b21ee0cf6ff47e9ccf108ef044be5e899feaf09ef167c2e4d1d1f1"
+    },
+    {
+      "file": "scripts/tc_zstab_pipeline.py",
+      "bytes": 12350,
+      "sha256": "ad4486822766f93247e950620575183b2bf267b9790e552e26155a9de1ab0031"
+    },
+    {
+      "file": "scripts/tc_zstab_weighted.py",
+      "bytes": 10758,
+      "sha256": "b5618b887cb80a1a512f9c31a37cf900199370734d57b0ae25e0ee72ee54c2a0"
+    }
+  ]
+}

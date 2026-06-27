@@ -1,0 +1,12 @@
+quantity,field,value,module_verdict
+galaxy amplitude,A_gal,0.6486716551832898,TAU-COMPATIBLE
+lensing amplitude,A_lens,0.646641718596578,TAU-COMPATIBLE
+galaxy-lensing tensor cosine,C_gal_lens,0.999944710970518,TAU-COMPATIBLE
+galaxy-lensing axis alignment,axis_alignment,0.9999849437363797,TAU-COMPATIBLE
+redshift tensor stability,S_z_tensor,0.9590038336702431,Z-STABLE
+redshift axis stability,S_z_axis,0.990057321738805,Z-STABLE
+weighted tensor stability,S_tensor_weighted,0.9634987255808966,WEIGHTED-Z-STABLE
+systematics retained fraction,retained_fraction,0.9065675169552325,CLEAN-CANDIDATE
+mock amplitude p-greater,p_amplitude_greater,0.012345679012345678,MOCK-RARE-WEAK
+extra velocity cosine,C_gal_velocity,0.9998899484447075,extra_readout_pass=True
+final score,score,9.0,STRONG-WITNESS-CANDIDATE

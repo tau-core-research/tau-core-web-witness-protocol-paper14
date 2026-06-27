@@ -1,0 +1,89 @@
+# TC-PREREG-001 — Tau-Web Analysis Preregistration Template
+
+analysis_name: "Tau-Web DESI + Lensing Cross-Readout Test"
+analysis_version: "v0.1"
+date_frozen: "YYYY-MM-DD"
+
+datasets:
+  galaxy:
+    survey: "DESI DR1"
+    tracer: "LRG"
+    region: "NGC"
+    catalogue_path: "data/desi/LRG_NGC_clustering.reduced.csv"
+    randoms_path: "data/desi/LRG_NGC_randoms.reduced.csv"
+    notes: "Use official DESI weights and randoms."
+
+  lensing:
+    survey: "TBD"
+    type: "kappa-table | shear-flat | healpix-kappa"
+    catalogue_path: "data/lensing/lensing_reduced.csv"
+    blind: true
+    notes: "Galaxy tensor must be frozen before lensing alignment is evaluated."
+
+  mocks:
+    source: "DESI official mocks / other"
+    glob: "data/mocks/mock_*.csv"
+    minimum_number: 100
+    notes: "Use official masks and weights where possible."
+
+pipeline:
+  scripts_commit: "git-hash-or-archive-checksum"
+  runbook: "TC-RUNBOOK-003.md"
+
+thresholds:
+  C_gal_lens_min: 0.80
+  tensor_rotation_p_max: 0.05
+  S_z_tensor_min: 0.80
+  S_z_axis_min: 0.80
+  systematics_retained_min: 0.60
+  mock_p_max: 0.05
+  extra_readout_C_min: 0.80
+
+z_stability:
+  n_bins: 5
+  min_per_bin: 500
+  weighted_rescue_allowed: true
+  weighted_rescue_allowed_only_for:
+    - "LOW-AMPLITUDE-BIN-NOISE"
+  weighted_rescue_forbidden_for:
+    - "DIRECTION-UNSTABLE"
+
+systematics:
+  templates:
+    - "survey_randoms"
+    - "footprint"
+    - "completeness"
+    - "stellar_contamination"
+    - "redshift_failure"
+    - "fibre_assignment"
+  projection_method: "STF 5D orthogonal projection"
+
+null_tests:
+  angular_scramble: true
+  radial_scramble: true
+  tensor_rotation: true
+  survey_randoms: true
+  mock_covariance: true
+  lensing_blind_test: true
+  extra_readout_nulls: false
+
+verdict_rules:
+  galaxy_only_never_tau_compatible: true
+  strong_witness_requires_third_readout: true
+  systematics_dominated_veto: true
+  mock_compatible_veto: true
+
+planned_outputs:
+  - "results/obs_result.json"
+  - "results/zstab_result.json"
+  - "results/zstab_diag.json"
+  - "results/zstab_weighted.json"
+  - "results/sys_result.json"
+  - "results/mock_cov_result.json"
+  - "results/extra_result.json"
+  - "results/final_verdict_v3.json"
+
+interpretation_policy:
+  TAU_COMPATIBLE: "Two-readout candidate, not discovery."
+  STRONG_WITNESS_CANDIDATE: "Three-readout candidate; requires independent replication."
+  WEAK_ANOMALY_GALAXY_ONLY: "No Tau claim."

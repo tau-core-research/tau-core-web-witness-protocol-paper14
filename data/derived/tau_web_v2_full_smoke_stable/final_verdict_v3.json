@@ -1,0 +1,106 @@
+{
+  "final_verdict": "STRONG-WITNESS-CANDIDATE",
+  "score": 9.0,
+  "evidence_level": "three-readout-core-pass",
+  "flags": {
+    "galaxy_anomaly": {
+      "pass": true,
+      "reason": "A_gal=0.6487; p_gal_catalog_scramble=0.004975; p_amp_mock=0.01235; z_amp_rough=103.2",
+      "A_gal": 0.6486716551832898,
+      "p_gal_catalog_scramble": 0.004975124378109453,
+      "p_amp_mock": 0.012345679012345678,
+      "z_amp_rough": 103.17881563596623
+    },
+    "cross_readout": {
+      "pass": true,
+      "reason": "C_gal_lens=0.9999 threshold=0.8; axis_alignment=1 threshold=0.8; A_lens=0.6466 threshold=0.05; p_tensor_rotation=0.009901 threshold=0.05",
+      "C_gal_lens": 0.999944710970518,
+      "axis_alignment": 0.9999849437363797,
+      "A_lens": 0.646641718596578,
+      "p_tensor_rotation": 0.009900990099009901
+    },
+    "z_stability": {
+      "pass": true,
+      "plain_pass": true,
+      "weighted_rescue": false,
+      "weighted_axis_weak": false,
+      "strength": "plain",
+      "reason": "plain S_z_tensor=0.9590038336702431; plain S_z_axis=0.990057321738805; valid_bins=5; verdict=Z-STABLE; diag=STABLE; weighted=WEIGHTED-Z-STABLE; S_tensor_w=0.9634987255808966; S_axis_w=0.9915358752899491; retained=5; diag_recommendation=Z-stability passes. Compare S_z against mocks for significance.",
+      "S_z_tensor": 0.9590038336702431,
+      "S_z_axis": 0.990057321738805,
+      "valid_bins": 5,
+      "module_verdict": "Z-STABLE",
+      "diag_failure_mode": "STABLE",
+      "weighted_verdict": "WEIGHTED-Z-STABLE",
+      "S_tensor_weighted": 0.9634987255808966,
+      "S_axis_weighted": 0.9915358752899491
+    },
+    "systematics": {
+      "pass": true,
+      "missing": false,
+      "dominated": false,
+      "reason": "retained_fraction=0.9065675169552325; sys_fraction=0.34735106674196914; verdict=CLEAN-CANDIDATE",
+      "retained_fraction": 0.9065675169552325,
+      "sys_fraction": 0.34735106674196914,
+      "module_verdict": "CLEAN-CANDIDATE"
+    },
+    "mock_rarity": {
+      "pass": true,
+      "strong": false,
+      "reason": "p_amp=0.012345679012345678; p_chi2=0.012345679012345678; n_mocks=80; verdict=MOCK-RARE-WEAK",
+      "p_amplitude_greater": 0.012345679012345678,
+      "p_chi2_greater": 0.012345679012345678,
+      "n_mocks": 80,
+      "module_verdict": "MOCK-RARE-WEAK"
+    },
+    "velocity_or_cmb": {
+      "pass": true,
+      "reason": "velocity_alignment_pass=True; cmb_alignment_pass=False",
+      "velocity": true,
+      "cmb": false
+    },
+    "extra_readout_v3": {
+      "pass": true,
+      "reason": "velocity: C=0.9999, axis=1, A=0.7705; cmb/kappa: missing",
+      "velocity_alignment_pass": true,
+      "cmb_alignment_pass": false,
+      "C_gal_velocity": 0.9998899484447075,
+      "C_gal_cmb": null
+    }
+  },
+  "inputs_seen": {
+    "obs": true,
+    "zstab": true,
+    "zdiag": true,
+    "zweighted": true,
+    "systematics": true,
+    "mock": true,
+    "extra": true
+  },
+  "reasoning": [
+    "galaxy_anomaly: PASS \u2014 A_gal=0.6487; p_gal_catalog_scramble=0.004975; p_amp_mock=0.01235; z_amp_rough=103.2",
+    "cross_readout: PASS \u2014 C_gal_lens=0.9999 threshold=0.8; axis_alignment=1 threshold=0.8; A_lens=0.6466 threshold=0.05; p_tensor_rotation=0.009901 threshold=0.05",
+    "z_stability: PASS \u2014 plain S_z_tensor=0.9590038336702431; plain S_z_axis=0.990057321738805; valid_bins=5; verdict=Z-STABLE; diag=STABLE; weighted=WEIGHTED-Z-STABLE; S_tensor_w=0.9634987255808966; S_axis_w=0.9915358752899491; retained=5; diag_recommendation=Z-stability passes. Compare S_z against mocks for significance.",
+    "systematics: PASS \u2014 retained_fraction=0.9065675169552325; sys_fraction=0.34735106674196914; verdict=CLEAN-CANDIDATE",
+    "mock_rarity: PASS \u2014 p_amp=0.012345679012345678; p_chi2=0.012345679012345678; n_mocks=80; verdict=MOCK-RARE-WEAK",
+    "velocity_or_cmb: PASS \u2014 velocity_alignment_pass=True; cmb_alignment_pass=False"
+  ],
+  "recommended_next_actions": [
+    "Strong-witness candidate still requires real-data third-readout mocks/nulls before any physical claim."
+  ],
+  "config": {
+    "cross_c_min": 0.8,
+    "cross_p_max": 0.05,
+    "axis_min": 0.8,
+    "lens_amp_min": 0.05,
+    "z_tensor_min": 0.8,
+    "z_axis_min": 0.8,
+    "mock_p_max": 0.05,
+    "mock_strong_p_max": 0.01,
+    "sys_retained_min": 0.6,
+    "sys_dominated_retained_max": 0.25,
+    "allow_weighted_z_rescue": true,
+    "allow_weighted_axis_weak": false
+  },
+  "engine": "TC-VERDICT-ENGINE-003"
+}
