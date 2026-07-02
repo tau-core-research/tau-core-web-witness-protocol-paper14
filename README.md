@@ -15,6 +15,11 @@ The paper defines a source-frozen protocol for promoting a cosmic-web anomaly
 from a galaxy-only filamentarity signal to a Tau-compatible multi-readout
 witness candidate.
 
+Terminology note: the candidate source behind a Tau-compatible web witness is
+a web-scale Tau **morphological body**. Galaxy, lensing, velocity, CMB, or
+other web tensors are projected readout handles on that body, not the body
+itself.
+
 The core rule is:
 
 ```text
