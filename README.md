@@ -45,6 +45,12 @@ The included stable smoke run reaches `STRONG-WITNESS-CANDIDATE` under the
 package verdict engine, but only as a reproducible protocol smoke run.  It is
 not a real-data discovery, not a cosmological validation, and not a proof of Tau Core.
 
+Paper 17 adds a downstream readout-covariance guard for this ladder.  Any
+future galaxy/lensing web alignment should be reported on two axes:
+`Z_shared` for shared-parent covariance and `Z_orient` for
+morphology/orientation support.  Orientation-only support is a warning/control
+class, not Tau Core evidence by itself.
+
 ## Required v1.1 Audit Upgrade
 
 A real-data-facing version should not rely only on the current smoke package.
