@@ -198,6 +198,26 @@ survey products.  The expected first endpoint requires:
 another source-native tracer.
 \end{enumerate}
 
+The real-data endpoint should also be upgraded to the same v1.1 audit standard
+used for the broader Tau Core reproducibility program:
+
+\begin{enumerate}
+\item \textbf{Raw-generator replay.}  Any mock or synthetic web/lensing source
+block must be replayable from its seed, parent generator, feature matrix,
+mask/selection rule, noise model, covariance rule, and train/held-out split.
+\item \textbf{Sensitivity sweep.}  Candidate status must be checked against
+predeclared variations of thresholds, ridge \(\lambda\) where a linear surrogate
+is used, SNR or map-noise assumptions, feature dimensions, redshift-bin choices,
+and held-out split definitions.
+\item \textbf{Mock-catalog injection.}  Source-native mocks should inject known
+web-aligned, misaligned, and systematics-dominated components before any
+real-survey candidate is promoted.  This is the first serious bridge from a
+smoke protocol to a realistic cosmic-web test.
+\item \textbf{Independent implementation.}  A separate implementation should
+rebuild the same frozen protocol and verify that the galaxy/lensing/extra-readout
+pattern is reproduced without sharing the original analysis code.
+\end{enumerate}
+
 Until those conditions are met, the correct status is:
 \[
 \texttt{STRONG\_WITNESS\_CANDIDATE\_SMOKE\_ONLY}.

@@ -45,6 +45,25 @@ The included stable smoke run reaches `STRONG-WITNESS-CANDIDATE` under the
 package verdict engine, but only as a reproducible protocol smoke run.  It is
 not a real-data discovery, not a cosmological validation, and not a proof of Tau Core.
 
+## Required v1.1 Audit Upgrade
+
+A real-data-facing version should not rely only on the current smoke package.
+The next reproducibility tier should add:
+
+- raw-generator replay for mock/synthetic web and lensing blocks from seed,
+  parent generator, feature matrix, mask and selection rule, noise model,
+  covariance rule, and held-out split;
+- sensitivity sweeps over thresholds, ridge `lambda` where applicable,
+  SNR/map-noise assumptions, feature dimensions, redshift-bin choices, and
+  held-out split definitions;
+- mock-catalog injection with known web-aligned, misaligned, and
+  systematics-dominated components;
+- an independent implementation that rebuilds the frozen protocol without
+  reusing the original scripts.
+
+These are promotion requirements, not claims that the current smoke run is a
+real-data validation.
+
 ## Does Not Claim
 
 - It does not claim a detected cosmic-web Tau signal.
