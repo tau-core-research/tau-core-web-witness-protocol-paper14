@@ -51,6 +51,13 @@ future galaxy/lensing web alignment should be reported on two axes:
 morphology/orientation support.  Orientation-only support is a warning/control
 class, not Tau Core evidence by itself.
 
+Paper 18 adds a more concrete photon-lensing morphology handle for this same
+guarded ladder: the MAR template `T_tau = B_env A_f M_bf`.  It is useful as a
+source-side lensing/morphology search statistic, but it does not by itself
+promote Paper 14's web witness.  A MAR correlation remains orientation-like
+support until it survives shared-parent covariance, source-overlap,
+survey-mask, and systematics controls.
+
 ## Required v1.1 Audit Upgrade
 
 A real-data-facing version should not rely only on the current smoke package.
