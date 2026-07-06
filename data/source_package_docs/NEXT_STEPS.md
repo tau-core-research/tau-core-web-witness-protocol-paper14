@@ -71,7 +71,22 @@ Meg kell mutatni, hogy a closure-stabil maradék standard mezőket ad.
 
 ### B4 — Kvantum-határ
 
-A closure-ágakból le kell vezetni a Hilbert-teret, Born-szabályt és no-signallingot.
+A frissített Tau Core státusz szerint a kvantumhatár nem általános
+closure-állításként kezelendő.  Finite toy szinten a megfelelő source-oldali
+út:
+
+\[
+Q\text{-PHASE-TRACE-SKELETON}_\tau(d)
+\Rightarrow
+Q\text{-COMPLEX-SEED-SOURCE}_\tau(d)
+\Rightarrow
+\text{finite Hilbert/Born toy packet}.
+\]
+
+Ehhez endpoint-blind source adatok kellenek: védett primitív frame, lapos
+ciklikus fázistorzor, reverzibilis rank-2 kontrasztmozgások, invariáns
+trace/effektus párosítás és közös null policy.  A teljes Hilbert-tér,
+no-signalling, collapse, QFT és tensor product egyértelműség továbbra is nyitott.
 
 ### B5 — Gauge és Standard Modell
 

@@ -683,7 +683,7 @@ e^{i\Theta_\tau(q_k^\star)}.
 \sum_k A_k|k\rangle.
 \]
 
-Born-szerű valószínűség:
+Born-szerű valószínűség ebben a korai closure-nyelvben:
 
 \[
 p_k=|A_k|^2
@@ -692,7 +692,7 @@ p_k=|A_k|^2
 {\sum_l e^{-\beta D_\tau(q_l^\star)}}.
 \]
 
-Mérés:
+Mérés, csak heurisztikus readout-nyelven:
 
 \[
 \boxed{
@@ -701,7 +701,7 @@ Mérés:
 }
 \]
 
-Összefonódás:
+Összefonódás-jellegű nem-faktorizálódás, heurisztikusan:
 
 \[
 C_\tau(q_A\cup q_B)
@@ -1460,6 +1460,21 @@ Strong witnesshez kell legalább egy:
 
 ## 18.6 Elméleti blokkolók
 
+Frissített kvantum-boundary: a későbbi Tau Core finomítás szerint a Born/Hilbert
+irány finite toy szinten nem pusztán closure-ágakból, hanem source-oldali
+fázis/trace skeletonból vezethető:
+
+\[
+Q\text{-PHASE-TRACE-SKELETON}_\tau(d)
+\Rightarrow
+Q\text{-COMPLEX-SEED-SOURCE}_\tau(d)
+\Rightarrow
+\text{finite Hilbert/Born toy packet}.
+\]
+
+Ez nem teljes kvantummechanika és nem QFT.  A triple loop holonomy eltűnése,
+\(H_{ijk}=0\), csak a finite komplex fázischart ragasztásának feltétele.
+
 A valódi elméleti áttöréshez bizonyítani kell:
 
 1. \(U_g\) tényleg sima Lorentz-geometriát ad bizonyos Tau-gráfosztályokra.
@@ -1467,7 +1482,7 @@ A valódi elméleti áttöréshez bizonyítani kell:
 3. \(U_m\) standard mezőket/részecskéket ad.
 4. A gauge-stabil automorfizmusok tényleg \(U(1)\times SU(2)\times SU(3)\)-at adnak.
 5. \(\mathrm{Index}(\mathcal D_{\rm gen})=3\) nem kézzel betett.
-6. A Born-szabály és no-signalling valóban kijön a closure-ágakból.
+6. A finite Hilbert/Born toy út túlmegy-e a source-frozen fázis/trace skeletonon: no-signalling, collapse, tensor product egyértelműség és QFT továbbra is nyitott.
 7. A \(\Delta^\tau_{ab}\) numerikusan prediktív, nem illeszthető szemetesláda.
 
 ---
