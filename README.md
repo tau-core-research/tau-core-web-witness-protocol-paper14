@@ -89,6 +89,13 @@ real-data validation.
   validation.
 - It does not claim a final theory of the cosmic web.
 
+## Full-4D Score Boundary
+
+The web-witness score is a protocol audit, not a Tau-over-standard likelihood.
+A physical replay requires one source-frozen
+`E_K = (K_HH - K_std) - C K_VV^-1 C^dagger` and co-registered terminal images
+with full covariance. No current witness value is reinterpreted.
+
 ## Reproduce
 
 ```bash
