@@ -1,6 +1,6 @@
 # Tau Core Web Witness Protocol Paper 14
 
-Private Paper 14 scaffold:
+Protocol and reproducibility package:
 
 **A source-frozen multi-readout Tau-web witness protocol**
 

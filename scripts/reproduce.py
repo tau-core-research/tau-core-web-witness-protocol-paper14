@@ -25,6 +25,9 @@ def build_pdf() -> None:
         run(["latexmk", "-pdf", "-interaction=nonstopmode", "main.tex"], cwd=source)
     elif shutil.which("pdflatex"):
         run(["pdflatex", "-interaction=nonstopmode", "main.tex"], cwd=source)
+        if shutil.which("bibtex"):
+            run(["bibtex", "main"], cwd=source)
+        run(["pdflatex", "-interaction=nonstopmode", "main.tex"], cwd=source)
         run(["pdflatex", "-interaction=nonstopmode", "main.tex"], cwd=source)
     else:
         raise RuntimeError("No LaTeX engine found: install tectonic, latexmk, or pdflatex.")
